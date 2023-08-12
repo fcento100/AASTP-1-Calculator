@@ -1,54 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="myStyle.css" />
+    <script src="myScript.js"></script>
     <title>AASTP-1 Calculator</title>
-    <style>
-      body {
-        font-size: 100%;
-        background-color: rgb(40, 42, 54);
-        color: rgb(248, 248, 242);
-        margin: auto;
-        max-width: 800px;
-      }
-      h1 {
-        color: rgb(255, 121, 198);
-      }
-      h2 {
-        color: rgb(189, 147, 249);
-      }
-      h3 {
-        color: rgb(255, 85, 85);
-      }
-      h4 {
-        color: rgb(241, 250, 140);
-      }
-      a {
-        color: rgb(80, 250, 123);
-      }
-      table,
-      th,
-      td {
-        border: 1px solid rgb(98, 114, 164);
-        border-collapse: collapse;
-        text-align: center;
-      }
-      li {
-        font-weight: bold;
-        color: rgb(139, 233, 253);
-      }
-      footer {
-        font-size: 70%;
-        position: fixed;
-        bottom: 0px;
-        text-align: center;
-        color: rgb(139, 233, 253);
-        background: rgb(61, 65, 87);
-        left: 0px;
-        right: 0px;
-      }
-    </style>
   </head>
   <h1>AASTP-1 Calculator</h1>
   <h2>NATO GUIDELINES FOR THE STORAGE OF MILITARY AMMUNITION AND EXPLOSIVES</h2>
@@ -99,53 +56,13 @@
     <footer>
       <p>
         If you found yourself on this page please be aware that the contents of
-        this page is for demonstration only and very much work in progress. Use at your own risk!<br />
+        this page is for demonstration only and very much work in progress. Use
+        at your own risk!<br />
         No validation or endorsment from NSO, NATO, Governments or anybody at
         all.<br />
         I strongly recommend using the publicly available standard found on the
         NSO website.<br />
       </p>
     </footer>
-    <script>
-      //if you are reading this hello! I made this to learn about HTML/CSS/JS, use at your own risk.
-      function updateCalcs() {
-        var Q = document.getElementById("Q").value;
-
-        //bd1
-        if (1 <= Q && Q < 30_000) {
-          document.getElementById("BD1").innerHTML = (
-            0.35 * Math.pow(Q, 1 / 3)
-          ).toFixed(2);
-        } else if (30_000 <= Q && Q <= 120_000) {
-          document.getElementById("BD1").innerHTML = (
-            0.44 * Math.pow(Q, 1 / 3)
-          ).toFixed(2);
-        } else {
-          document.getElementById("BD1").innerHTML = "N/A";
-        }
-
-        //bd2
-        if (1 <= Q && Q < 1_500) {
-          document.getElementById("BD2").innerHTML = (
-            0.4 * Math.pow(Q, 1 / 3)
-          ).toFixed(2);
-        } else if (1_500 <= Q && Q <= 500_000) {
-          document.getElementById("BD2").innerHTML = (
-            0.6 * Math.pow(Q, 1 / 3)
-          ).toFixed(2);
-        } else {
-          document.getElementById("BD2").innerHTML = "N/A";
-        }
-
-        //bd6
-        if (1 <= Q && Q <= 500_000) {
-          document.getElementById("BD6").innerHTML = (
-            1.2 * Math.pow(Q, 1 / 3)
-          ).toFixed(2);
-        } else {
-          document.getElementById("BD6").innerHTML = "N/A";
-        }
-      }
-    </script>
   </body>
 </html>
