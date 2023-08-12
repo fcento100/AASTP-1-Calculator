@@ -33,12 +33,12 @@ li {
   color: rgb(139, 233, 253);
 }
 footer {
-  font-size: 70%;
-  position: fixed;
-  bottom: 0px;
-  text-align: center;
+  font-size: 60%;
   color: rgb(139, 233, 253);
   background: rgb(61, 65, 87);
+  text-align: center;
+  position: sticky;
+  bottom: 0px;
   left: 0px;
   right: 0px;
 }
